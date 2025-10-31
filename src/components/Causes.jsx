@@ -1,16 +1,51 @@
 import React from "react";
 import { Utensils, Leaf, Users, BookOpen, Heart } from "lucide-react";
-import ffl from "../assets/ffl.png"; 
-import mdm from "../assets/dmd.png"; 
-import cc from "../assets/cow_care.png"; 
-import yi from "../assets/youth_impowerment.jpg"; 
+import ffl from "../assets/ffl.png";
+import mdm from "../assets/dmd.png";
+import cc from "../assets/cow_care.png";
+import yi from "../assets/youth_impowerment.jpg";
 
 const causes = [
-  { id: 1, title: "Food Distribution", desc: "Help us serve hot nutritious meals", icon: <Utensils className="w-8 h-8 text-white" />, img: ffl },
-  { id: 2, title: "Cow Care", desc: "Support and protect cows", icon: <Leaf className="w-8 h-8 text-white" />, img: cc },
-  { id: 3, title: "Anti-Addiction", desc: "Help youth live a better life", icon: <Users className="w-8 h-8 text-white" />, img: "https://..." },
-  { id: 4, title: "Youth Empowerment", desc: "Education and skills training", icon: <BookOpen className="w-8 h-8 text-white" />, img: yi },
-  { id: 5, title: "Mid-Day Meal", desc: "Nutritious food for children", icon: <Heart className="w-8 h-8 text-white" />, img: mdm },
+  {
+    id: 1,
+    title: "Food Distribution",
+    desc: "Help us serve hot nutritious meals",
+    icon: <Utensils className="w-8 h-8 text-white" />,
+    img: ffl,
+    link: "https://pages.razorpay.com/ISKCONFOODDISTRIBUTION",
+  },
+  {
+    id: 2,
+    title: "Cow Care",
+    desc: "Support and protect cows",
+    icon: <Leaf className="w-8 h-8 text-white" />,
+    img: cc,
+    link: "https://pages.razorpay.com/ISKCONFOODDISTRIBUTION",
+  },
+  {
+    id: 3,
+    title: "Anti-Addiction",
+    desc: "Help youth live a better life",
+    icon: <Users className="w-8 h-8 text-white" />,
+    img: "https://...",
+    link: "https://pages.razorpay.com/ISKCONFOODDISTRIBUTION",
+  },
+  {
+    id: 4,
+    title: "Youth Empowerment",
+    desc: "Education and skills training",
+    icon: <BookOpen className="w-8 h-8 text-white" />,
+    img: yi,
+    link: "https://pages.razorpay.com/ISKCONFOODDISTRIBUTION",
+  },
+  {
+    id: 5,
+    title: "Mid-Day Meal",
+    desc: "Nutritious food for children",
+    icon: <Heart className="w-8 h-8 text-white" />,
+    img: mdm,
+    link: "https://pages.razorpay.com/ISKCONFOODDISTRIBUTION",
+  },
 ];
 
 const Causes = () => {
@@ -36,10 +71,14 @@ const Causes = () => {
               <p className="text-gray-600 flex-1">{cause.desc}</p>
             </div>
             <div className="p-6 pt-0">
-              <button onClick={() => alert(`Donate to ${cause.title}`)}
-               className="w-full bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 rounded-full font-semibold shadow-md hover:from-pink-600 hover:to-pink-700 transition-all">
+              <a
+                href={cause.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full text-center bg-gradient-to-r from-pink-500 to-pink-600 text-white py-3 rounded-full font-semibold shadow-md hover:from-pink-600 hover:to-pink-700 transition-all"
+              >
                 Donate Now
-              </button>
+              </a>
             </div>
           </div>
         ))}
